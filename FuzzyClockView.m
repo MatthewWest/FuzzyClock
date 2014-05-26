@@ -40,7 +40,7 @@
 	[stringShadow setShadowColor:[NSColor colorWithDeviceWhite:1 alpha:0.3]];
 	NSSize shadowOffset;
 	shadowOffset.width = 0;
-	shadowOffset.height = -1;
+	shadowOffset.height = -0.5;
 	[stringShadow setShadowOffset:shadowOffset];
 	[stringShadow setShadowBlurRadius:1];
 	[drawStringAttributes setValue:stringShadow forKey:NSShadowAttributeName];	
