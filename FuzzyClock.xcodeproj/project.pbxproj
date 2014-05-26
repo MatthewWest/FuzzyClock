@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34F061781932EE9600ECA667 /* FuzzyClock.menu in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49B6048680CD000E48DA /* FuzzyClock.menu */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		AF6C0BDB1306FA840014D720 /* SystemUIPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6C0BDA1306FA840014D720 /* SystemUIPlugin.framework */; };
@@ -177,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34F061781932EE9600ECA667 /* FuzzyClock.menu in Resources */,
 				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

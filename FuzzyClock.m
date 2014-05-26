@@ -65,7 +65,7 @@
 
 - (NSString*)getDateText
 {
-    NSDate *now = [[NSDate alloc] init];
+    NSDate *now = [[[NSDate alloc] init] autorelease];
     NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
     [formatter setDateFormat:@"EEEE, MMMM d, y"];
     return [formatter stringFromDate:now];
@@ -73,7 +73,7 @@
 
 - (NSString*)getClockText
 {
-    NSDate *now = [[NSDate alloc] init];
+    NSDate *now = [[[NSDate alloc] init] autorelease];
 	NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
     if (showSeconds) {
         [formatter setDateFormat:@"h:mm:ss a"];
@@ -205,7 +205,9 @@
             break;
         case 12:
             hour_name = @"noon";
+            break;
         default:
+            hour_name = @"??????";
             break;
     }
     switch (state % 100) {
