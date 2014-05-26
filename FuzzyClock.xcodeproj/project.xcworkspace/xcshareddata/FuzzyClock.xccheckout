@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B46728C2-A356-4E75-9112-FAEE3E36D7A2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FuzzyClock</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0FA33DD8-8582-4891-B2E1-0DA9AE12690E</key>
+		<string>https://github.com/MatthewWest/FuzzyClock.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FuzzyClock.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0FA33DD8-8582-4891-B2E1-0DA9AE12690E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/MatthewWest/FuzzyClock.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0FA33DD8-8582-4891-B2E1-0DA9AE12690E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0FA33DD8-8582-4891-B2E1-0DA9AE12690E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FuzzyClock</string>
+		</dict>
+	</array>
+</dict>
+</plist>
