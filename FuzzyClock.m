@@ -41,6 +41,7 @@
 											  target:self
 											selector:@selector(_updateTimer:)
 											userInfo:nil repeats:YES] retain];
+    showSeconds = true;
 	
 	return self;
 }
@@ -122,7 +123,6 @@
 
 - (void)_menuClicked:(NSNotification *)notification
 {
-	[self updateTimeFormat];
     [self updateClock];
     [self updateMenu];
 }
@@ -252,12 +252,5 @@
 {
     [clockMenuItem setTitle:[self getClockText]];
     [dateMenuItem setTitle:[self getDateText]];
-}
-
-- (void)updateTimeFormat
-{
-	// if the normal clock menuextra shows seconds, we will too.
-	id format = [(id)CFPreferencesCopyAppValue((CFStringRef)@"DateFormat", (CFStringRef)@"com.apple.menuextra.clock") autorelease];
-	showSeconds = format == nil || [format rangeOfString:@":ss"].location != NSNotFound;
 }
 @end

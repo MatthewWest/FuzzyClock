@@ -29,5 +29,4 @@
 - (NSString*)getFuzzyTime;
 - (void)_menuClicked:(NSNotification *)notification;
 - (void)updateMenu;
-- (void)updateTimeFormat;
 @end
