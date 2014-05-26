@@ -157,7 +157,7 @@
     switch (hour) {
         case 0:
         case 24:
-            hour_name = @"midnight";
+            return @"midnight";
             break;
         case 1:
         case 13:
@@ -204,7 +204,7 @@
             hour_name = @"eleven";
             break;
         case 12:
-            hour_name = @"noon";
+            return @"noon";
             break;
         default:
             hour_name = @"??????";
