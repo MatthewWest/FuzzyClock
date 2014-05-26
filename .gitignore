@@ -165,3 +165,7 @@ xcuserdata
 *.pbxproj
 
 *.xcuserstate
+
+FuzzyClock.xcodeproj/project.pbxproj
+
+FuzzyClock.xcodeproj/project.xcworkspace/xcuserdata/matthew.xcuserdatad/UserInterfaceState.xcuserstate
