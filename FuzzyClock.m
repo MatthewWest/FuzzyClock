@@ -31,7 +31,6 @@
 	[clockMenuItem setEnabled:false];
     dateMenuItem = [theMenu addItemWithTitle:@"day, month ##, ####" action:nil keyEquivalent:@""];
     [dateMenuItem setEnabled:false];
-	periodTitle = @"";
 	
 	[self setMenu:theMenu];
 	[self setHighlightMode:YES];
@@ -73,9 +72,6 @@
 - (void)updateClock
 {
 	[theView setClockString:[self getFuzzyTime]];
-    if ([self isMenuDown]) {
-        [self updateMenu];
-    }
 }
 
 - (void)_updateTimer:(NSTimer*)timer
@@ -112,8 +108,9 @@
     if (state != nextState)
     {
         state = nextState;
+        [self updateClock];
     }
-    [self updateClock];
+    if ([self isMenuDown]) [self updateMenu];
 }
 
 - (void)_menuClicked:(NSNotification *)notification
@@ -125,7 +122,7 @@
 
 - (NSString *)getFuzzyTime
 {
-    NSCalendarDate *now = [NSCalendarDate calendarDate];
+    NSCalendarDate *now = [[NSCalendarDate calendarDate] autorelease];
     int hour = [now hourOfDay];
 
     NSString *fuzzy_time;
@@ -191,6 +188,7 @@
         default:
             break;
     }
+    
     switch (state % 100) {
         case 0:
             formatting = @"%@ o'clock";

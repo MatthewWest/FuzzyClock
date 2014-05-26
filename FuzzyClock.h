@@ -16,11 +16,8 @@
 	FuzzyClockView *theView;
 	NSMenu *theMenu;
 	NSTimer *timer;
-	NSArray *periods;
-	NSString* periodTitle;
 	NSMenuItem* clockMenuItem;
     NSMenuItem* dateMenuItem;
-	int period;
     int state;
 	BOOL showSeconds;
 }
