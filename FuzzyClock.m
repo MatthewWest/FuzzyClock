@@ -31,7 +31,6 @@
 	[clockMenuItem setEnabled:false];
     dateMenuItem = [theMenu addItemWithTitle:@"day, month ##, ####" action:nil keyEquivalent:@""];
     [dateMenuItem setEnabled:false];
-	periodTitle = @"";
 	
 	[self setMenu:theMenu];
 	[self setHighlightMode:YES];
@@ -66,7 +65,12 @@
 {
     NSDate *now = [[NSDate alloc] init];
 	NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
-    [formatter setDateFormat:@"h:mm:ss a"];
+    if (showSeconds) {
+        [formatter setDateFormat:@"h:mm:ss a"];
+    } else {
+        [formatter setDateFormat:@"h:mm a"];
+    }
+    
 	return [formatter stringFromDate:now];
 }
 
