@@ -1,10 +1,11 @@
 //
-//  FuzzyClock.h
+//  FuzzyClock.m
 //  FuzzyClock
 //
-//  Created by Charles Lehner on 2/12/11.
-//  Copyright 2011 Charles Lehner. All rights reserved.
+//  Created by Matthew West on 5/25/14.
+//  Copyright 2014 Matthew West. All Rights Reserved.
 //
+
 
 #import <Cocoa/Cocoa.h>
 #import "NSMenuExtra.h"
@@ -24,7 +25,7 @@
 
 - (NSString*)getClockText;
 - (NSString*)getDateText;
-- (void)updateClock;
+- (void)updateClock:(Boolean)update;
 - (void)_updateTimer:(NSTimer*)timer;
 - (NSString*)getFuzzyTime;
 - (void)_menuClicked:(NSNotification *)notification;

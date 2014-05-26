@@ -2,8 +2,8 @@
 //  FuzzyClock.m
 //  FuzzyClock
 //
-//  Created by Charles Lehner on 2/12/11.
-//  Copyright 2011 Charles Lehner. All rights reserved.
+//  Created by Matthew West on 5/25/14.
+//  Copyright 2014 Matthew West. All Rights Reserved.
 //
 
 #import "FuzzyClock.h"
@@ -35,12 +35,18 @@
 	[self setMenu:theMenu];
 	[self setHighlightMode:YES];
 
-	[self updateClock];
+	[self updateClock:true];
 	
 	timer = [[NSTimer scheduledTimerWithTimeInterval:(NSTimeInterval)1
 											  target:self
 											selector:@selector(_updateTimer:)
 											userInfo:nil repeats:YES] retain];
+
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(_menuClicked:)
+												 name:NSMenuDidBeginTrackingNotification
+											   object:theMenu];
+
     showSeconds = true;
 	
 	return self;
@@ -48,6 +54,9 @@
 
 - (void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+													name:NSMenuDidBeginTrackingNotification
+												  object:theMenu];
     [theView release];
     [theMenu release];
 	[timer release];
@@ -75,9 +84,11 @@
 	return [formatter stringFromDate:now];
 }
 
-- (void)updateClock
+- (void)updateClock:(Boolean)update
 {
-	[theView setClockString:[self getFuzzyTime]];
+    if (update)
+        [theView setClockString:[self getFuzzyTime]];
+    
     if ([self isMenuDown]) {
         [self updateMenu];
     }
@@ -117,13 +128,15 @@
     if (state != nextState)
     {
         state = nextState;
+        [self updateClock:true];
+    } else {
+        [self updateClock:false];
     }
-    [self updateClock];
 }
 
 - (void)_menuClicked:(NSNotification *)notification
 {
-    [self updateClock];
+    [self updateClock:true];
     [self updateMenu];
 }
 
